@@ -1,46 +1,42 @@
-import sys
 from random import randint
-from PyQt5.QtWidgets import QWidget, QPushButton, QLabel, QGridLayout, QApplication, QGroupBox
+import sys
+from PyQt5 import QtWidgets, uic, QtCore
 
 
-class Ui(QWidget):
-    unused_labels = 0
+class Ui(QtWidgets.QMainWindow):
+    VOKALE = ["A", "E", "I", "O", "U"]
+    unused_text_labels = 1
 
     def __init__(self):
-        super().__init__()
-        self.initUi()
-        self.setWindowTitle("Countdown-Game")
+        super(Ui, self).__init__()  # Call the inherited classes __init__ method
+        uic.loadUi('countdown.ui', self)  # Load the .ui file
+        self.initUI()
 
-    def initUi(self):
+    def initUI(self):
+        self.resize(300, 200)
 
-        self.vokal = QPushButton("Vokal", self)
-        self.vokal.move(200, 100)
+        self.vokal = self.findChild(QtWidgets.QPushButton, "vokal")  # Find Vokal Button
         self.vokal.clicked.connect(self.vokal_generator)
 
+        self.konsonant = self.findChild(QtWidgets.QPushButton, "konsonant")  # Find Konsonant Button
+
+        self.exit = self.findChild(QtWidgets.QPushButton, "beenden")  # Find beenden Button
+        self.exit.clicked.connect(QtCore.QCoreApplication.instance().quit)
         self.labels = []
         for i in range(1, 10):
-            label = QLabel(self)
-            label.setObjectName("buchstabe_{}".format(i))
-            label.setText("a")
+            name = "buchstabe_{}".format(i)
+            label = self.findChild(QtWidgets.QLabel, name)
             self.labels.append(label)
-        self.createGridLayout()
-        self.show()
 
-    def createGridLayout(self):
-        layout = QGridLayout()
-        for i in range(9):
-            layout.addWidget(self.labels[i], 0, i)
-        Ui.setLayout(self, layout)
+        self.show()  # Show the GUI1
 
     def vokal_generator(self):
-        VOKALE = ["A", "E", "I", "O", "U"]
-
-        new_vokal = VOKALE[randint(0, 4)]
-        self.labels[Ui.unused_labels].setText(new_vokal)
+        new_vokal = Ui.VOKALE[randint(0, 4)]
+        self.labels[Ui.unused_text_labels].setText(new_vokal)
+        Ui.unused_text_labels += 1
         print("Vokal pressed")
-        Ui.unused_labels += 1
 
 
-app = QApplication(sys.argv)
+app = QtWidgets.QApplication(sys.argv)
 window = Ui()
-sys.exit(app.exec_())
+app.exec_()
