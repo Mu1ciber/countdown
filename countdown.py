@@ -12,8 +12,9 @@ class Ui(QtWidgets.QMainWindow):
     def __init__(self):
         super(Ui, self).__init__()  # Call the inherited classes __init__ method
         uic.loadUi('countdown.ui', self)  # Load the .ui file
+        self.setWindowTitle("Countdown-Game")
         self.initUI()
-
+        
     def initUI(self):
         self.vokal = self.findChild(QtWidgets.QPushButton, "vokal")  # Find Vokal Button
         self.vokal.clicked.connect(self.vokal_generator)  # call function
@@ -21,8 +22,11 @@ class Ui(QtWidgets.QMainWindow):
         self.konsonant = self.findChild(QtWidgets.QPushButton, "konsonant")  # Find Konsonant Button
         self.konsonant.clicked.connect(self.konsonanten_generator)  # call function
 
-        self.exit = self.findChild(QtWidgets.QPushButton, "beenden")  # Find beenden Button
+        self.exit = self.findChild(QtWidgets.QPushButton, "exit")  # Find beenden Button
         self.exit.clicked.connect(QtCore.QCoreApplication.instance().quit)  # quit
+
+        self.again = self.findChild(QtWidgets.QPushButton, "again")
+        self.again.clicked.connect(self.restart)
 
         self.error_msg = self.findChild(QtWidgets.QLabel, "error_msg")
 
@@ -51,6 +55,12 @@ class Ui(QtWidgets.QMainWindow):
             self.error_msg.setText("Du hast schon 9 Buchstaben!")
         print("Konsonant pressed")
 
+    def restart(self):
+        for i in self.labels:
+            i.setText("")
+        self.error_msg.setText("")
+        Ui.unused_text_labels = 0
+        print("restart pressed")
 
 app = QtWidgets.QApplication(sys.argv)
 window = Ui()

@@ -1,163 +1,132 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
-    <class>MainWindow</class>
-    <widget class="QMainWindow" name="MainWindow">
-        <property name="geometry">
-            <rect>
-                <x>0</x>
-                <y>0</y>
-                <width>475</width>
-                <height>209</height>
-            </rect>
-        </property>
-        <property name="windowTitle">
-            <string>MainWindow</string>
-        </property>
-        <widget class="QWidget" name="centralwidget">
-            <widget class="QPushButton" name="konsonant">
-                <property name="geometry">
-                    <rect>
-                        <x>340</x>
-                        <y>30</y>
-                        <width>81</width>
-                        <height>23</height>
-                    </rect>
-                </property>
-                <property name="text">
-                    <string>Konsonant</string>
-                </property>
-            </widget>
-            <widget class="QPushButton" name="vokal">
-                <property name="geometry">
-                    <rect>
-                        <x>50</x>
-                        <y>30</y>
-                        <width>75</width>
-                        <height>23</height>
-                    </rect>
-                </property>
-                <property name="text">
-                    <string>Vokal</string>
-                </property>
-            </widget>
-            <widget class="QPushButton" name="beenden">
-                <property name="geometry">
-                    <rect>
-                        <x>340</x>
-                        <y>170</y>
-                        <width>81</width>
-                        <height>23</height>
-                    </rect>
-                </property>
-                <property name="text">
-                    <string>Beenden</string>
-                </property>
-            </widget>
-            <widget class="QLabel" name="buchstabe_5">
-                <property name="geometry">
-                    <rect>
-                        <x>216</x>
-                        <y>90</y>
-                        <width>41</width>
-                        <height>51</height>
-                    </rect>
-                </property>
-            </widget>
-            <widget class="QLabel" name="buchstabe_3">
-                <property name="geometry">
-                    <rect>
-                        <x>124</x>
-                        <y>90</y>
-                        <width>40</width>
-                        <height>51</height>
-                    </rect>
-                </property>
-            </widget>
-            <widget class="QLabel" name="buchstabe_1">
-                <property name="geometry">
-                    <rect>
-                        <x>31</x>
-                        <y>90</y>
-                        <width>40</width>
-                        <height>51</height>
-                    </rect>
-                </property>
-            </widget>
-            <widget class="QLabel" name="buchstabe_9">
-                <property name="geometry">
-                    <rect>
-                        <x>402</x>
-                        <y>90</y>
-                        <width>40</width>
-                        <height>51</height>
-                    </rect>
-                </property>
-            </widget>
-            <widget class="QLabel" name="buchstabe_7">
-                <property name="geometry">
-                    <rect>
-                        <x>309</x>
-                        <y>90</y>
-                        <width>40</width>
-                        <height>51</height>
-                    </rect>
-                </property>
-            </widget>
-            <widget class="QLabel" name="buchstabe_6">
-                <property name="geometry">
-                    <rect>
-                        <x>263</x>
-                        <y>90</y>
-                        <width>40</width>
-                        <height>51</height>
-                    </rect>
-                </property>
-            </widget>
-            <widget class="QLabel" name="buchstabe_2">
-                <property name="geometry">
-                    <rect>
-                        <x>77</x>
-                        <y>90</y>
-                        <width>41</width>
-                        <height>51</height>
-                    </rect>
-                </property>
-            </widget>
-            <widget class="QLabel" name="buchstabe_8">
-                <property name="geometry">
-                    <rect>
-                        <x>355</x>
-                        <y>90</y>
-                        <width>41</width>
-                        <height>51</height>
-                    </rect>
-                </property>
-            </widget>
-            <widget class="QLabel" name="buchstabe_4">
-                <property name="geometry">
-                    <rect>
-                        <x>170</x>
-                        <y>90</y>
-                        <width>40</width>
-                        <height>51</height>
-                    </rect>
-                </property>
-            </widget>
-            <widget class="QLabel" name="error_msg">
-                <property name="geometry">
-                    <rect>
-                        <x>30</x>
-                        <y>170</y>
-                        <width>271</width>
-                        <height>20</height>
-                    </rect>
-                </property>
-                <property name="text">
-                    <string/>
-                </property>
-            </widget>
-        </widget>
-    </widget>
-    <resources/>
-    <connections/>
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>475</width>
+    <height>209</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="konsonant">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>30</y>
+      <width>81</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Konsonant</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="vokal">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>30</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Vokal</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="exit">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>170</y>
+      <width>81</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Beenden</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="error_msg">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>170</y>
+      <width>271</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="again">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>30</y>
+      <width>81</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Nochmal</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>31</x>
+      <y>90</y>
+      <width>411</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>true</bool>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QLabel" name="buchstabe_1"/>
+     </item>
+     <item>
+      <widget class="QLabel" name="buchstabe_2"/>
+     </item>
+     <item>
+      <widget class="QLabel" name="buchstabe_3"/>
+     </item>
+     <item>
+      <widget class="QLabel" name="buchstabe_4"/>
+     </item>
+     <item>
+      <widget class="QLabel" name="buchstabe_5"/>
+     </item>
+     <item>
+      <widget class="QLabel" name="buchstabe_6"/>
+     </item>
+     <item>
+      <widget class="QLabel" name="buchstabe_7"/>
+     </item>
+     <item>
+      <widget class="QLabel" name="buchstabe_8"/>
+     </item>
+     <item>
+      <widget class="QLabel" name="buchstabe_9">
+       <property name="autoFillBackground">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
 </ui>
